@@ -17,6 +17,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dog", "Dog\Dog.vcxproj", "{
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "We_love_kriii", "We_love_kriii\We_love_kriii.vcxproj", "{8935C625-7B34-403D-B946-F27B2771CEE9}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Output_as_it_is", "Output_as_it_is\Output_as_it_is.vcxproj", "{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -73,6 +75,14 @@ Global
 		{8935C625-7B34-403D-B946-F27B2771CEE9}.Release|x64.Build.0 = Release|x64
 		{8935C625-7B34-403D-B946-F27B2771CEE9}.Release|x86.ActiveCfg = Release|Win32
 		{8935C625-7B34-403D-B946-F27B2771CEE9}.Release|x86.Build.0 = Release|Win32
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Debug|x64.ActiveCfg = Debug|x64
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Debug|x64.Build.0 = Debug|x64
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Debug|x86.ActiveCfg = Debug|Win32
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Debug|x86.Build.0 = Debug|Win32
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x64.ActiveCfg = Release|x64
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x64.Build.0 = Release|x64
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x86.ActiveCfg = Release|Win32
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +94,7 @@ Global
 		{815A5CD6-E618-479F-B973-00087C774CF0} = {B8E7FAB1-A56A-4B27-B4A2-D31BBB47CEC4}
 		{5AB79E93-FF76-4CA9-B603-EB379B798BA5} = {B8E7FAB1-A56A-4B27-B4A2-D31BBB47CEC4}
 		{8935C625-7B34-403D-B946-F27B2771CEE9} = {B8E7FAB1-A56A-4B27-B4A2-D31BBB47CEC4}
+		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A} = {B8E7FAB1-A56A-4B27-B4A2-D31BBB47CEC4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {496BA98B-701B-452D-BF0A-B0BD25B7C685}
