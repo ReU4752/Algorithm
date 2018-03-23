@@ -6,3 +6,9 @@
 *.db-shm
 
 *.db-wal
+
+*.ipch
+
+*.tlog
+
+*.idb
