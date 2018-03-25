@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "We_love_kriii", "We_love_kr
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Output_as_it_is", "Output_as_it_is\Output_as_it_is.vcxproj", "{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DFSBFS", "DFSBFS\DFSBFS.vcxproj", "{14B58C21-6F83-42CF-915A-15BB2C842045}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -83,6 +85,14 @@ Global
 		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x64.Build.0 = Release|x64
 		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x86.ActiveCfg = Release|Win32
 		{59D9E98B-9D18-4943-9E6E-DEF7D1BA544A}.Release|x86.Build.0 = Release|Win32
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Debug|x64.ActiveCfg = Debug|x64
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Debug|x64.Build.0 = Debug|x64
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Debug|x86.ActiveCfg = Debug|Win32
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Debug|x86.Build.0 = Debug|Win32
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x64.ActiveCfg = Release|x64
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x64.Build.0 = Release|x64
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x86.ActiveCfg = Release|Win32
+		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
