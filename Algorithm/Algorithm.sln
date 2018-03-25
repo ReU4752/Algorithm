@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Output_as_it_is", "Output_a
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DFSBFS", "DFSBFS\DFSBFS.vcxproj", "{14B58C21-6F83-42CF-915A-15BB2C842045}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Explorethemaze", "Explorethemaze\Explorethemaze.vcxproj", "{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -93,6 +95,14 @@ Global
 		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x64.Build.0 = Release|x64
 		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x86.ActiveCfg = Release|Win32
 		{14B58C21-6F83-42CF-915A-15BB2C842045}.Release|x86.Build.0 = Release|Win32
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Debug|x64.ActiveCfg = Debug|x64
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Debug|x64.Build.0 = Debug|x64
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Debug|x86.ActiveCfg = Debug|Win32
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Debug|x86.Build.0 = Debug|Win32
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Release|x64.ActiveCfg = Release|x64
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Release|x64.Build.0 = Release|x64
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Release|x86.ActiveCfg = Release|Win32
+		{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
