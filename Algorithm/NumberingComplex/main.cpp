@@ -5,13 +5,6 @@
 #include <algorithm>
 #include <queue>
 
-void Swap(int& a, int& b)
-{
-  int temp = a;
-  a = b;
-  b = temp;
-}
-
 int n; // 지도의 크기 n * n
 std::vector<std::vector<int>> map;
 std::vector<int> complex; // 단지
@@ -28,6 +21,9 @@ struct House
   }
 };
 std::queue<House> Q;
+
+int dX[4] = { 0, 0, 1, -1 }; // 미리 방향을 지정
+int dY[4] = { 1, -1, 0, 0 }; // 미리 방향을 지정
 
 void Calc()
 {
@@ -47,33 +43,21 @@ void Calc()
 
       while (!Q.empty()) // 큐가 비어있으면 루프탈출
       {
-        House h = Q.front();
+        House nowHouse = Q.front();
         Q.pop();
 
-        int nextX = 0;
-        int nextY = -1;
-        int* exchange = &nextY;
-
-        for (int j = 0; j < 4; j++)
+        for (int i = 0; i < 4; i++)
         {
-          if (j == 2)
+          if (nowHouse.x + dX[i] >= 0 && nowHouse.y + dY[i] >= 0 &&
+              nowHouse.x + dX[i] < n && nowHouse.y + dY[i] < n
+              && map[nowHouse.y + dY[i]][nowHouse.x + dX[i]])
           {
-            exchange = &nextX;
-            Swap(nextX, nextY);
-          }
-
-          if (h.y + nextY >= 0 && h.y + nextY < n &&
-            h.x + nextX >= 0 && h.x + nextX < n &&
-            map[h.y + nextY][h.x + nextX] != 0)
-          {
-            Q.push(House(h.x + nextX, h.y + nextY));
+            Q.push(House(nowHouse.x + dX[i], nowHouse.y + dY[i]));
 
             houseNum++;
 
-            map[h.y + nextY][h.x + nextX] = 0;
+            map[nowHouse.y + dY[i]][nowHouse.x + dX[i]] = 0;
           }
-
-          (*exchange) *= -1;
         }
       }
 
