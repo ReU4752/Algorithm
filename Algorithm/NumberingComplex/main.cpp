@@ -52,29 +52,29 @@ void Calc()
 
         int nextX = 0;
         int nextY = -1;
-        int* change = &nextY;
+        int* exchange = &nextY;
 
-        for (int j = 0; j < 2; j++)
+        for (int j = 0; j < 4; j++)
         {
-          for (int k = 0; k < 2; k++)
+          if (j == 2)
           {
-            if (h.y + nextY >= 0 && h.y + nextY < n &&
-                h.x + nextX >= 0 && h.x + nextX < n &&
-                map[h.y + nextY][h.x + nextX] != 0)
-            {
-              Q.push(House(h.x + nextX, h.y + nextY));
-
-              houseNum++;
-
-              map[h.y + nextY][h.x + nextX] = 0;
-            }
-
-            (*change) *= -1;
+            exchange = &nextX;
+            Swap(nextX, nextY);
           }
 
-          change = &nextX;
-          Swap(nextX, nextY);
-        } 
+          if (h.y + nextY >= 0 && h.y + nextY < n &&
+              h.x + nextX >= 0 && h.x + nextX < n &&
+              map[h.y + nextY][h.x + nextX] != 0)
+          {
+            Q.push(House(h.x + nextX, h.y + nextY));
+
+            houseNum++;
+
+            map[h.y + nextY][h.x + nextX] = 0;
+          }
+
+          (*exchange) *= -1;
+        }
 			}
 
 			complex.push_back(houseNum);
