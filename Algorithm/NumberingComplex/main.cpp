@@ -18,37 +18,37 @@ std::vector<int> complex; // 단지
 
 struct House
 {
-	int x, y;
+  int x, y;
 
-	House() {}
-	House(int _x, int _y)
-	{
-		x = _x;
-		y = _y;
-	}
+  House() {}
+  House(int _x, int _y)
+  {
+    x = _x;
+    y = _y;
+  }
 };
 std::queue<House> Q;
 
 void Calc()
 {
-	for (int i = 0; i < n * n; i++)
-	{
-		int x = i % n;
-		int y = i / n;
+  for (int i = 0; i < n * n; i++)
+  {
+    int x = i % n;
+    int y = i / n;
 
-		if (map[y][x] != 0)
-		{
-			int houseNum = 0;
+    if (map[y][x] != 0)
+    {
+      int houseNum = 0;
 
-			Q.push(House(x, y));
+      Q.push(House(x, y));
 
-			map[y][x] = 0;
-			houseNum++;
+      map[y][x] = 0;
+      houseNum++;
 
-			while (!Q.empty()) // 큐가 비어있으면 루프탈출
-			{
-				House h = Q.front();
-				Q.pop();
+      while (!Q.empty()) // 큐가 비어있으면 루프탈출
+      {
+        House h = Q.front();
+        Q.pop();
 
         int nextX = 0;
         int nextY = -1;
@@ -63,8 +63,8 @@ void Calc()
           }
 
           if (h.y + nextY >= 0 && h.y + nextY < n &&
-              h.x + nextX >= 0 && h.x + nextX < n &&
-              map[h.y + nextY][h.x + nextX] != 0)
+            h.x + nextX >= 0 && h.x + nextX < n &&
+            map[h.y + nextY][h.x + nextX] != 0)
           {
             Q.push(House(h.x + nextX, h.y + nextY));
 
@@ -75,42 +75,42 @@ void Calc()
 
           (*exchange) *= -1;
         }
-			}
+      }
 
-			complex.push_back(houseNum);
-		}
-	}
+      complex.push_back(houseNum);
+    }
+  }
 }
 
 int main()
 {
-	scanf("%d", &n);
-	map.reserve(n);
+  scanf("%d", &n);
+  map.reserve(n);
 
-	for (int i = 0; i < n; i++)
-	{
-		char str[26];
-		std::vector<int> vec;
+  for (int i = 0; i < n; i++)
+  {
+    char str[26];
+    std::vector<int> vec;
 
-		vec.reserve(n);
+    vec.reserve(n);
 
-		scanf("%s", str);
+    scanf("%s", str);
 
-		for (int j = 0; j < n; j++)
-		{
-			vec.push_back(str[j] - '0');
-		}
-		map.push_back(vec);
-	}
+    for (int j = 0; j < n; j++)
+    {
+      vec.push_back(str[j] - '0');
+    }
+    map.push_back(vec);
+  }
 
-	Calc();
-	
-	std::sort(complex.begin(), complex.end()); // 단지의 속하는 집의 수를 기준으로 정렬
-	
-	int size = complex.size();
-	printf("%d\n", size); // 총단지수 
-	for (auto i : complex)
-		printf("%d\n", i); // 단지의 속하는 집의 수를 출력
+  Calc();
 
-	return 0;
+  std::sort(complex.begin(), complex.end()); // 단지의 속하는 집의 수를 기준으로 정렬
+
+  int size = complex.size();
+  printf("%d\n", size); // 총단지수 
+  for (auto i : complex)
+    printf("%d\n", i); // 단지의 속하는 집의 수를 출력
+
+  return 0;
 }
