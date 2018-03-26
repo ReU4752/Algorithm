@@ -5,7 +5,14 @@
 #include <algorithm>
 #include <queue>
 
-int n; // 지도의 크기
+void Swap(int& a, int& b)
+{
+  int temp = a;
+  a = b;
+  b = temp;
+}
+
+int n; // 지도의 크기 n * n
 std::vector<std::vector<int>> map;
 std::vector<int> complex; // 단지
 
@@ -43,37 +50,31 @@ void Calc()
 				House h = Q.front();
 				Q.pop();
 
-				// 위에 집이 있다면
-				if (h.y > 0 && map[h.y - 1][h.x] != 0)
-				{
-					Q.push(House(h.x, h.y - 1));
-					houseNum++;
-					map[h.y - 1][h.x] = 0;
-				}
+        int nextX = 0;
+        int nextY = -1;
+        int* change = &nextY;
 
-				// 아래에 집이 있다면
-				if (h.y < n - 1 && map[h.y + 1][h.x] != 0)
-				{
-					Q.push(House(h.x, h.y + 1));
-					houseNum++;
-					map[h.y + 1][h.x] = 0;
-				}
+        for (int j = 0; j < 2; j++)
+        {
+          for (int k = 0; k < 2; k++)
+          {
+            if (h.y + nextY >= 0 && h.y + nextY < n &&
+                h.x + nextX >= 0 && h.x + nextX < n &&
+                map[h.y + nextY][h.x + nextX] != 0)
+            {
+              Q.push(House(h.x + nextX, h.y + nextY));
 
-				// 왼쪽에 집이 있다면
-				if (h.x > 0 && map[h.y][h.x - 1] != 0)
-				{
-					Q.push(House(h.x - 1, h.y));
-					houseNum++;
-					map[h.y][h.x - 1] = 0;
-				}
+              houseNum++;
 
-				// 오른쪽에 집이 있다면
-				if (h.x < n - 1 && map[h.y][h.x + 1] != 0)
-				{
-					Q.push(House(h.x + 1, h.y));
-					houseNum++;
-					map[h.y][h.x + 1] = 0;
-				}
+              map[h.y + nextY][h.x + nextX] = 0;
+            }
+
+            (*change) *= -1;
+          }
+
+          change = &nextX;
+          Swap(nextX, nextY);
+        } 
 			}
 
 			complex.push_back(houseNum);
