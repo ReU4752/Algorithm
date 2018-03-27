@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{19A5C2BF-6CBD-4032-BD87-CFD9FD872CE3}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Explorethemaze", "Explorethemaze\Explorethemaze.vcxproj", "{79ACFAF6-E0BC-4FC5-BB30-79ECB95F03E1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberingComplex", "NumberingComplex\NumberingComplex.vcxproj", "{EAFB7027-A859-4E54-A182-B9C17CA557B7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FindNumber", "FindNumber\FindNumber.vcxproj", "{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +115,14 @@ Global
 		{EAFB7027-A859-4E54-A182-B9C17CA557B7}.Release|x64.Build.0 = Release|x64
 		{EAFB7027-A859-4E54-A182-B9C17CA557B7}.Release|x86.ActiveCfg = Release|Win32
 		{EAFB7027-A859-4E54-A182-B9C17CA557B7}.Release|x86.Build.0 = Release|Win32
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Debug|x64.ActiveCfg = Debug|x64
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Debug|x64.Build.0 = Debug|x64
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Debug|x86.ActiveCfg = Debug|Win32
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Debug|x86.Build.0 = Debug|Win32
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Release|x64.ActiveCfg = Release|x64
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Release|x64.Build.0 = Release|x64
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Release|x86.ActiveCfg = Release|Win32
+		{69DC5F5B-FAEF-4B22-8588-BFBAF75F1A6D}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
