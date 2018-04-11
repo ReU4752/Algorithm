@@ -33,6 +33,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Ouput_as_it_is_2", "Ouput_a
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tomato", "Tomato\Tomato.vcxproj", "{A6FBA3CB-75C6-460A-A4FD-AA76D595EC72}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tomato2", "Tomato2\Tomato2.vcxproj", "{B129D3F8-9236-41B3-8649-AC62D7CA3602}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -153,6 +155,14 @@ Global
 		{A6FBA3CB-75C6-460A-A4FD-AA76D595EC72}.Release|x64.Build.0 = Release|x64
 		{A6FBA3CB-75C6-460A-A4FD-AA76D595EC72}.Release|x86.ActiveCfg = Release|Win32
 		{A6FBA3CB-75C6-460A-A4FD-AA76D595EC72}.Release|x86.Build.0 = Release|Win32
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Debug|x64.ActiveCfg = Debug|x64
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Debug|x64.Build.0 = Debug|x64
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Debug|x86.ActiveCfg = Debug|Win32
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Debug|x86.Build.0 = Debug|Win32
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Release|x64.ActiveCfg = Release|x64
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Release|x64.Build.0 = Release|x64
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Release|x86.ActiveCfg = Release|Win32
+		{B129D3F8-9236-41B3-8649-AC62D7CA3602}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
