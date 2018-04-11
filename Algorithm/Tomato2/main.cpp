@@ -1,5 +1,5 @@
 // https://www.acmicpc.net/problem/7569
-// 0218-04-10
+// 2018-04-10
 
 #include <stdio.h>
 #include <vector>
