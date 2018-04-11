@@ -25,9 +25,10 @@ int blankCount, lessRipenCount;
 
 int GetLastRipenDay()
 {
-  //static int rowDir[4] = {};
-  //static int colDir[4] = {};
-  //static int heightDir[4] = {};
+  static int rowDir[6] = { -1, 1, 0, 0, 0, 0 };
+  static int colDir[6] = { 0, 0, -1, 1, 0, 0 };
+  static int heightDir[6] = { 0, 0, 0, 0, -1, 1 };
+
   int lastDay = 0;
   int ripenCount = 0;
 
@@ -40,47 +41,18 @@ int GetLastRipenDay()
 
     g_spaceQueue.pop();
 
-    if (nowSpace.row > 0 && g_storage[nowSpace.height][nowSpace.row - 1][nowSpace.col] == 0)
+    for (int i = 0; i < 6; i++)
     {
-      g_storage[nowSpace.height][nowSpace.row - 1][nowSpace.col] = 1;
-      g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row - 1, nowSpace.col, nowSpace.height));
+      if (nowSpace.row + rowDir[i] >= 0 && nowSpace.row + rowDir[i] <= row - 1
+          && nowSpace.col + colDir[i] >= 0 && nowSpace.col + colDir[i] <= col - 1
+          && nowSpace.height + heightDir[i] >= 0 && nowSpace.height + heightDir[i] <= height - 1
+          && g_storage[nowSpace.height + heightDir[i]][nowSpace.row + rowDir[i]][nowSpace.col + colDir[i]] == 0)
+      {
+        g_storage[nowSpace.height + heightDir[i]][nowSpace.row + rowDir[i]][nowSpace.col + colDir[i]] = 1;
+        g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row + rowDir[i], nowSpace.col + colDir[i], nowSpace.height + heightDir[i]));
 
-      ripenCount++;
-    }
-    if (nowSpace.row < row - 1 && g_storage[nowSpace.height][nowSpace.row + 1][nowSpace.col] == 0)
-    {
-      g_storage[nowSpace.height][nowSpace.row + 1][nowSpace.col] = 1;
-      g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row + 1, nowSpace.col, nowSpace.height));
-
-      ripenCount++;
-    }
-    if (nowSpace.col > 0 && g_storage[nowSpace.height][nowSpace.row][nowSpace.col - 1] == 0)
-    {
-      g_storage[nowSpace.height][nowSpace.row][nowSpace.col - 1] = 1;
-      g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row, nowSpace.col - 1, nowSpace.height));
-
-      ripenCount++;
-    }
-    if (nowSpace.col < col - 1 && g_storage[nowSpace.height][nowSpace.row][nowSpace.col + 1] == 0)
-    {
-      g_storage[nowSpace.height][nowSpace.row][nowSpace.col + 1] = 1;
-      g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row, nowSpace.col + 1, nowSpace.height));
-
-      ripenCount++;
-    }
-    if (nowSpace.height > 0 && g_storage[nowSpace.height - 1][nowSpace.row][nowSpace.col] == 0)
-    {
-      g_storage[nowSpace.height - 1][nowSpace.row][nowSpace.col] = 1;
-      g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row, nowSpace.col, nowSpace.height - 1));
-
-      ripenCount++;
-    }
-    if (nowSpace.height < height - 1 && g_storage[nowSpace.height + 1][nowSpace.row][nowSpace.col] == 0)
-    {
-      g_storage[nowSpace.height + 1][nowSpace.row][nowSpace.col] = 1;
-      g_spaceQueue.push(Space(nowSpace.day + 1, nowSpace.row, nowSpace.col, nowSpace.height + 1));
-
-      ripenCount++;
+        ripenCount++;
+      }
     }
   }
 
