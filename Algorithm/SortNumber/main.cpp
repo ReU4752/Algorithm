@@ -3,10 +3,12 @@
 
 #include <stdio.h>
 #include <vector>
+#include <stack>
 
 using namespace std;
 
 vector<int> g_storage;
+stack<pair<int, int>> g_sortStack;
 
 void Swap(int& a, int& b)
 {
@@ -15,30 +17,39 @@ void Swap(int& a, int& b)
   b = temp;
 }
 
-void QSort(int left, int right)
+void QSort()
 {
-  int l = left;
-  int r = right;
-  int pivot = g_storage[(l + r) / 2];
+  g_sortStack.push(make_pair(0, g_storage.size() - 1));
 
-  do
+  while (!g_sortStack.empty())
   {
-    while (g_storage[l] < pivot)
-      l++;
-    while (g_storage[r] > pivot)
-      r--;
-    if (l <= r)
+    int left = g_sortStack.top().first;
+    int right = g_sortStack.top().second;
+    int l = left;
+    int r = right;
+    int pivot = g_storage[(l + r) / 2];
+
+    g_sortStack.pop();
+
+    do
     {
-      Swap(g_storage[l], g_storage[r]);
-      l++; r--;
-    }
-  } while (l <= r);
+      while (g_storage[l] < pivot)
+        l++;
+      while (g_storage[r] > pivot)
+        r--;
+      if (l <= r)
+      {
+        Swap(g_storage[l], g_storage[r]);
+        l++;
+        r--;
+      }
+    } while (l <= r);
 
-  if (left < r)
-    QSort(left, r);
-
-  if (l < right)
-    QSort(l, right);
+    if (left < r)
+      g_sortStack.push(make_pair(left, r));
+    if (l < right)
+      g_sortStack.push(make_pair(l, right));
+  }
 }
 
 int main()
@@ -54,7 +65,7 @@ int main()
     g_storage.push_back(num);
   }
 
-  QSort(0, g_storage.size() - 1);
+  QSort();
 
   for (auto itr : g_storage)
   {
