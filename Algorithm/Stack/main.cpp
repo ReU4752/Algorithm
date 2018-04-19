@@ -107,7 +107,7 @@ int main()
   int commandNum = 0;
   scanf("%d", &commandNum);
 
-  getc(stdin);
+  getc(stdin); // 입력 버퍼에 \n이 남아있어서 초기화
 
   char str[15];
   for (int i = 0; i < commandNum; i++)
