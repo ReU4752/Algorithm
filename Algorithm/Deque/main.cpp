@@ -42,11 +42,7 @@ Deque::Deque()
 
 Deque::~Deque()
 {
-  // 해제를 위해 이 메소드를 호출하면, 답이 아니라고 출력합니다(시간초과).
-  // 그래서 일단 주석처리 했습니다.
-  // When I call the method for release, it outputs that it is the incorrect answer(timeout). 
-  // So I comment out for now.
-  // Clear();
+  Clear();
 }
 
 void Deque::Push_Front(int data)
@@ -103,6 +99,11 @@ int Deque::Pop_Front()
 
     _size--;
 
+		if (IsEmpty())
+			_head = _tail = nullptr;
+		else
+			_head->next = nullptr;
+
     return data;
   }
 
@@ -122,6 +123,11 @@ int Deque::Pop_Back()
     deleteNode = nullptr;
 
     _size--;
+
+		if (IsEmpty())
+			_head = _tail = nullptr;
+		else
+			_tail->prev = nullptr;
 
     return data;
   }
@@ -170,6 +176,7 @@ void Deque::Clear()
 
     deleteNode = _head;
   }
+	_tail = _head = nullptr;
 }
 
 int main()
