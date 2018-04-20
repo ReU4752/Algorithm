@@ -43,6 +43,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Queue", "Queue\Queue.vcxpro
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumOfWords", "NumOfWords\NumOfWords.vcxproj", "{1A043B6D-CEE6-410D-9C23-3B2DDCBC05BB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintStar_1", "PrintStar_1\PrintStar_1.vcxproj", "{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -203,6 +205,14 @@ Global
 		{1A043B6D-CEE6-410D-9C23-3B2DDCBC05BB}.Release|x64.Build.0 = Release|x64
 		{1A043B6D-CEE6-410D-9C23-3B2DDCBC05BB}.Release|x86.ActiveCfg = Release|Win32
 		{1A043B6D-CEE6-410D-9C23-3B2DDCBC05BB}.Release|x86.Build.0 = Release|Win32
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Debug|x64.ActiveCfg = Debug|x64
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Debug|x64.Build.0 = Debug|x64
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Debug|x86.ActiveCfg = Debug|Win32
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Debug|x86.Build.0 = Debug|Win32
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Release|x64.ActiveCfg = Release|x64
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Release|x64.Build.0 = Release|x64
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Release|x86.ActiveCfg = Release|Win32
+		{B5AB6BE9-346E-4A84-B7E8-7715699BCBDC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
