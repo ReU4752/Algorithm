@@ -49,6 +49,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintStar_2", "PrintStar_2\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Year2007", "Year2007\Year2007.vcxproj", "{BA52872B-30B9-47C5-BE9A-3F335BAE97C4}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deque", "Deque\Deque.vcxproj", "{436E680F-17CB-4598-BDE4-CFF2579E119F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -233,6 +235,14 @@ Global
 		{BA52872B-30B9-47C5-BE9A-3F335BAE97C4}.Release|x64.Build.0 = Release|x64
 		{BA52872B-30B9-47C5-BE9A-3F335BAE97C4}.Release|x86.ActiveCfg = Release|Win32
 		{BA52872B-30B9-47C5-BE9A-3F335BAE97C4}.Release|x86.Build.0 = Release|Win32
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Debug|x64.ActiveCfg = Debug|x64
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Debug|x64.Build.0 = Debug|x64
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Debug|x86.ActiveCfg = Debug|Win32
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Debug|x86.Build.0 = Debug|Win32
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x64.ActiveCfg = Release|x64
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x64.Build.0 = Release|x64
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x86.ActiveCfg = Release|Win32
+		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
