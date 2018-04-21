@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{19A5C2BF-6CBD-4032-BD87-CFD9FD872CE3}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Year2007", "Year2007\Year2007.vcxproj", "{BA52872B-30B9-47C5-BE9A-3F335BAE97C4}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deque", "Deque\Deque.vcxproj", "{436E680F-17CB-4598-BDE4-CFF2579E119F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PrintStar_3", "PrintStar_3\PrintStar_3.vcxproj", "{39B31832-6512-47EF-BC61-CA30E1D3E631}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -243,6 +245,14 @@ Global
 		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x64.Build.0 = Release|x64
 		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x86.ActiveCfg = Release|Win32
 		{436E680F-17CB-4598-BDE4-CFF2579E119F}.Release|x86.Build.0 = Release|Win32
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Debug|x64.ActiveCfg = Debug|x64
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Debug|x64.Build.0 = Debug|x64
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Debug|x86.ActiveCfg = Debug|Win32
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Debug|x86.Build.0 = Debug|Win32
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Release|x64.ActiveCfg = Release|x64
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Release|x64.Build.0 = Release|x64
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Release|x86.ActiveCfg = Release|Win32
+		{39B31832-6512-47EF-BC61-CA30E1D3E631}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
