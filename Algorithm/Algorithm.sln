@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{19A5C2BF-6CBD-4032-BD87-CFD9FD872CE3}"
 EndProject
@@ -58,6 +58,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Padoban", "Padoban\Padoban.vcxproj", "{012D44CC-AB2C-470D-A577-3B1DC01BB9D1}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FibonacciGetZeroOne", "FibonacciGetZeroOne\FibonacciGetZeroOne.vcxproj", "{478AC6F8-743A-4E8C-9350-D98B77FA3514}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RGBStreet", "RGBStreet\RGBStreet.vcxproj", "{51DA4E96-C04D-43BB-92F2-45963D420F9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -283,6 +285,14 @@ Global
 		{478AC6F8-743A-4E8C-9350-D98B77FA3514}.Release|x64.Build.0 = Release|x64
 		{478AC6F8-743A-4E8C-9350-D98B77FA3514}.Release|x86.ActiveCfg = Release|Win32
 		{478AC6F8-743A-4E8C-9350-D98B77FA3514}.Release|x86.Build.0 = Release|Win32
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Debug|x64.ActiveCfg = Debug|x64
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Debug|x64.Build.0 = Debug|x64
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Debug|x86.ActiveCfg = Debug|Win32
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Debug|x86.Build.0 = Debug|Win32
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Release|x64.ActiveCfg = Release|x64
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Release|x64.Build.0 = Release|x64
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Release|x86.ActiveCfg = Release|Win32
+		{51DA4E96-C04D-43BB-92F2-45963D420F9E}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
