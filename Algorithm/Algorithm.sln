@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{19A5C2BF-6CBD-4032-BD87-CFD9FD872CE3}"
 EndProject
@@ -62,6 +62,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RGBStreet", "RGBStreet\RGBStreet.vcxproj", "{51DA4E96-C04D-43BB-92F2-45963D420F9E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NumberTriangle", "NumberTriangle\NumberTriangle.vcxproj", "{B0CAE68B-51F6-4C06-BDBD-EF89CD6EC4EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClimbingStairs", "ClimbingStairs\ClimbingStairs.vcxproj", "{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -303,6 +305,14 @@ Global
 		{B0CAE68B-51F6-4C06-BDBD-EF89CD6EC4EC}.Release|x64.Build.0 = Release|x64
 		{B0CAE68B-51F6-4C06-BDBD-EF89CD6EC4EC}.Release|x86.ActiveCfg = Release|Win32
 		{B0CAE68B-51F6-4C06-BDBD-EF89CD6EC4EC}.Release|x86.Build.0 = Release|Win32
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Debug|x64.ActiveCfg = Debug|x64
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Debug|x64.Build.0 = Debug|x64
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Debug|x86.ActiveCfg = Debug|Win32
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Debug|x86.Build.0 = Debug|Win32
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Release|x64.ActiveCfg = Release|x64
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Release|x64.Build.0 = Release|x64
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Release|x86.ActiveCfg = Release|Win32
+		{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
