@@ -10,7 +10,9 @@ tuple<int, int, int> dp[50];
 
 int Fibonacci(int n)
 {
-	if (n == 0)
+	if (get<0>(dp[n]) != 0)
+		return get<0>(dp[n]);
+	else if (n == 0)
 	{
 		get<1>(dp[0]) = 1;
 		return 0;
@@ -20,9 +22,6 @@ int Fibonacci(int n)
 		get<2>(dp[1]) = 1;
 		return 1;
 	}
-
-	if (get<0>(dp[n]) != 0)
-		return get<0>(dp[n]);
 
 	get<0>(dp[n]) = Fibonacci(n - 1) + Fibonacci(n - 2);
 	get<1>(dp[n]) = get<1>(dp[n - 1]) + get<1>(dp[n - 2]);
