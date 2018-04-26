@@ -27,16 +27,15 @@ int main()
     for (int j = 1; j <= i; j++)
     {
       scanf("%d", &tri[i][j]);
-    }
-  }
 
-  result[1][1] = tri[1][1];
-
-  for (int i = 2; i <= triSize; i++)
-  {
-    for (int j = 1; j <= i; j++)
-    {
-      result[i][j] = MAX(result[i - 1][j] + tri[i][j], result[i - 1][j  - 1] + tri[i][j]);
+      if (i == 1)
+      {
+        result[1][1] = tri[1][1];
+      }
+      else if (i > 1)
+      {
+        result[i][j] = MAX(result[i - 1][j] + tri[i][j], result[i - 1][j - 1] + tri[i][j]);
+      }
     }
   }
 
