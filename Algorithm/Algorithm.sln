@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2009
+VisualStudioVersion = 15.0.27004.2006
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "HelloWorld\HelloWorld.vcxproj", "{19A5C2BF-6CBD-4032-BD87-CFD9FD872CE3}"
 EndProject
@@ -66,6 +66,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ClimbingStairs", "ClimbingStairs\ClimbingStairs.vcxproj", "{8D4C551F-68D6-4D17-8E06-20839A7E6EFF}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MakeItOne", "MakeItOne\MakeItOne.vcxproj", "{038C736F-E061-4357-82D4-B648B2FA35F3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OneTwoThreePlus", "OneTwoThreePlus\OneTwoThreePlus.vcxproj", "{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -323,6 +325,14 @@ Global
 		{038C736F-E061-4357-82D4-B648B2FA35F3}.Release|x64.Build.0 = Release|x64
 		{038C736F-E061-4357-82D4-B648B2FA35F3}.Release|x86.ActiveCfg = Release|Win32
 		{038C736F-E061-4357-82D4-B648B2FA35F3}.Release|x86.Build.0 = Release|Win32
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Debug|x64.ActiveCfg = Debug|x64
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Debug|x64.Build.0 = Debug|x64
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Debug|x86.ActiveCfg = Debug|Win32
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Debug|x86.Build.0 = Debug|Win32
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Release|x64.ActiveCfg = Release|x64
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Release|x64.Build.0 = Release|x64
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Release|x86.ActiveCfg = Release|Win32
+		{5A19A360-1D99-42D9-95B6-3B56A1A2C3E4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
