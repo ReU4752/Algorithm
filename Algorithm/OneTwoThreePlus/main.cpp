@@ -1,21 +1,25 @@
 #include <stdio.h>
+#include <memory.h>
 
-int GetCanSumCount(int n)
+int GetCanSumCount(int n, int* dp)
 {
   if (n == 0) // 종료 조건
     return 1;
   
+  if (dp[n] != 0)
+    return dp[n];
+
   int count = 0;
 
   // 점화식
   if (n - 1 >= 0)
-    count += GetCanSumCount(n - 1);
+    count += GetCanSumCount(n - 1, dp);
   if (n - 2 >= 0)
-    count += GetCanSumCount(n - 2);
+    count += GetCanSumCount(n - 2, dp);
   if (n - 3 >= 0)
-    count += GetCanSumCount(n - 3);
+    count += GetCanSumCount(n - 3, dp);
 
-  return count;
+  return dp[n] = count;
 }
 
 int main()
@@ -25,11 +29,15 @@ int main()
   scanf("%d", &numCase);
 
   int num;
+  int dp[12];
+
+  memset(dp, 0, sizeof(int) * 12);
+
   for (int i = 0; i < numCase; i++)
   {
     scanf("%d", &num);
 
-    printf("%d\n", GetCanSumCount(num));
+    printf("%d\n", GetCanSumCount(num, dp));
   }
 
   return 0;
