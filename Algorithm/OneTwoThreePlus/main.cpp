@@ -1,3 +1,6 @@
+// https://www.acmicpc.net/problem/9095
+// 2018-05-01
+
 #include <stdio.h>
 #include <memory.h>
 
