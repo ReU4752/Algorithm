@@ -1,37 +1,43 @@
 #include <stdio.h>
-#include <string>
 #include <memory.h>
 
-using namespace std;
-
-int GetPinaryNumber(int n, int depth, char lastNum)
+unsigned long long GetPinaryNumber(int n, int depth, char lastNum, unsigned long long(*dp)[2])
 {
   if (depth == n) // 종료 조건
+  {
     return 1;
+  }
+
+  if (dp[depth][lastNum - '0'] != 0)
+  {
+    return dp[depth][lastNum - '0'];
+  }
 
   // 점화식
-  int count = 0;
+  unsigned long long count = 0;
 
   if (lastNum == '1')
   {
-    count += GetPinaryNumber(n, depth + 1, '0');
+    count += GetPinaryNumber(n, depth + 1, '0', dp);
   }
   else if(lastNum == '0')
   {
-    count += GetPinaryNumber(n, depth + 1, '0');
-    count += GetPinaryNumber(n, depth + 1, '1');
+    count += GetPinaryNumber(n, depth + 1, '0', dp);
+    count += GetPinaryNumber(n, depth + 1, '1', dp);
   }
      
-  return count;
+  return dp[depth][lastNum - '0'] = count;
 }
 
 int main()
 {
   int n;
+  unsigned long long dp[100][2];
+  memset(dp, 0, sizeof(unsigned long long) * 200);
 
   scanf("%d", &n);
 
-  printf("%d", GetPinaryNumber(n, 1, '1'));
+  printf("%llu", GetPinaryNumber(n, 1, '1', dp));
 
   return 0;
 }
