@@ -4,49 +4,48 @@
 #include <stdio.h>
 #include <string.h>
 
-int n; // 정점의 개수
-int m; // 간선의 개수
-int map[1001][1001]; // 인접 행렬
+int N; // 정점의 개수
+int M; // 간선의 개수
+
+int adjMat[1001][1001]; // 인접행렬
 int visit[1001]; // 방문 배열
 
-void DFS(int v)
+void DFS(int VisitVertexNum)
 {
-	visit[v] = 1;
-	printf("%d ", v);
+	visit[VisitVertexNum] = 1;
+	printf("%d ", VisitVertexNum);
 
-	for (int i = 1; i <= n; i++)
+	for (int i = 1; i <= N; i++)
 	{
-		// 정점 v와 i가 연결되어있고, 정점 i를 방문하지않았을경우
-		if (map[v][i] == 1 && !visit[i])
+		if (adjMat[VisitVertexNum][i] == 1 && visit[i] == 0)
 		{
 			DFS(i);
 		}
 	}
 }
 
-int front, rear; // 전단, 후단
-int queue[1001]; // 큐
+int front, rear;
+int queue[1001];
 
-void BFS(int v)
+void BFS(int VisitVertexNum)
 {
-	// 점점 v를 방문했다 표시
-	visit[v] = 1;
-	printf("%d ", v);
+	front = rear = 0;
 
-	// 큐에 v를 삽입하고 후단을 1증가시킴
-	queue[rear++] = v;
-	while (front < rear) // 전단이 후단과 같거나 작으면 루프탈출
+	queue[rear++] = VisitVertexNum;
+	visit[VisitVertexNum] = 1;
+
+	int v = 0;
+	while (front < rear)
 	{
-		// 큐의 첫번째에 있는 데이터를 가져오고, 1 증가
 		v = queue[front++];
-		for (int i = 1; i <= n; i++)
+		printf("%d ", v);
+
+		for (int i = 1; i <= N; i++)
 		{
-			// 정점 v와 정점 i가 연결되어있고, 정점i를 방문하지않았을경우
-			if (map[v][i] == 1 && !visit[i])
+			if (adjMat[v][i] == 1 && visit[i] == 0)
 			{
-				visit[i] = 1; // 정점 i를 방문했다고 표시
-				printf("%d ", i);
-				queue[rear++] = i; // 큐에 i를 삽입하고 1증가.
+				queue[rear++] = i;
+				visit[i] = 1;
 			}
 		}
 	}
@@ -54,23 +53,28 @@ void BFS(int v)
 
 int main()
 {
-	int start;
-	int v1, v2;
-
-	scanf("%d%d%d", &n, &m, &start);
-
-	for (int i = 0; i < m; i++)
-	{
-		scanf("%d%d", &v1, &v2);
-
-		map[v1][v2] = map[v2][v1] = 1;
-	}
-	DFS(start);
-
-	printf("\n");
+	memset(adjMat, 0, sizeof(adjMat));
 	memset(visit, 0, sizeof(visit));
 
-	BFS(start);
+	int StartVertexNum;
+
+	scanf("%d %d %d", &N, &M, &StartVertexNum);
+
+	for (int i = 0; i < M; i++)
+	{
+		int conV1, conV2;
+		scanf("%d %d", &conV1, &conV2);
+
+		// 양방향 그래프라서 둘다 true
+		adjMat[conV1][conV2] = adjMat[conV2][conV1] = 1;
+	}
+
+	DFS(StartVertexNum);
+
+	memset(visit, 0, sizeof(visit));
+	printf("\n");
+
+	BFS(StartVertexNum);
 
 	return 0;
 }
