@@ -1,2 +1,8 @@
-# 알고리즘 풀이, 백업 용 레포지토리.
-# This repository used to solve algorithm and backup project。
+# Algorithm
+
+<img src="https://img.shields.io/badge/language-C%2B%2B-ff69b4.svg">
+
+This repository store solved algorithm codes.
+
+## Problem Source
+* [**Baekjoon OJ**](https://www.acmicpc.net/)
